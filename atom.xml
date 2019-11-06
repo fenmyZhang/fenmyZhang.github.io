@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://fenmyZhang.github.io</id>
     <title>fenmy呢</title>
-    <updated>2019-11-06T18:11:13.735Z</updated>
+    <updated>2019-11-06T18:21:21.742Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://fenmyZhang.github.io"/>
     <link rel="self" href="https://fenmyZhang.github.io/atom.xml"/>
@@ -11,23 +11,16 @@
     <icon>https://fenmyZhang.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, fenmy呢</rights>
     <entry>
-        <title type="html"><![CDATA[试着写一篇东西]]></title>
+        <title type="html"><![CDATA[表单post和get在使用过程的问题记录]]></title>
         <id>https://fenmyZhang.github.io/post/onemore</id>
         <link href="https://fenmyZhang.github.io/post/onemore">
         </link>
         <updated>2019-11-04T03:49:12.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://fenmyZhang.github.io/post/hello-gridea</id>
-        <link href="https://fenmyZhang.github.io/post/hello-gridea">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <summary type="html"><![CDATA[<p>在form表单中的<strong>method</strong>使用post时候出现提交并非post提交而是get提交，在地址栏产生参数<br>
+...</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <content type="html"><![CDATA[<p>在form表单中的<strong>method</strong>使用post时候出现提交并非post提交而是get提交，在地址栏产生参数<br>
+...</p>
 ]]></content>
     </entry>
 </feed>

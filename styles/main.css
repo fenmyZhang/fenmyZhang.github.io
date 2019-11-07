@@ -1461,4 +1461,8 @@ a.purple-link {
 }
 
       .post-item{border-bottom: 1px solid #ffdede;}
+@media (max-width: 600px)
+#live2d-widget{
+    display:none;
+}
     

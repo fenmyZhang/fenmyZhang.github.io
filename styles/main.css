@@ -1077,6 +1077,11 @@ summary {
 .site-footer .social-container a {
   margin: 0 8px;
 }
+@media (max-width: 600px) {
+  #live2dcanvas {
+    display: none;
+  }
+}
 .site-header-container {
   position: fixed;
   right: 0;

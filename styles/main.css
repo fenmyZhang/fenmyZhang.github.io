@@ -1287,7 +1287,6 @@ a.purple-link {
   padding: 32px 0;
 }
 .post-detail .post-title {
-  font-size: 32px;
   margin: 24px 0;
   color: var(--c-base-black);
 }
@@ -1460,10 +1459,6 @@ a.purple-link {
   border-radius: 16px;
 }
 
-      body {
-        font-size: 14px;
-      }
-    
       .post-item{border-bottom: 1px solid #ffdede;}
 @media (max-width: 600px)
 #live2d-widget{

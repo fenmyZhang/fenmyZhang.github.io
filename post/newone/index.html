@@ -1,172 +1,200 @@
-
-<!DOCTYPE html>
 <html>
-  <head>
-    
-<meta charset="utf-8" >
 
-<title>表单post和get在使用过程的问题记录 | fenmy</title>
-<meta name="description" content="小小技术存档   &gt;}-_-`}&gt;">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://fenmyZhang.github.io/favicon.ico?v=1573182820537">
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    表单post和get在使用过程的问题记录 | fenmy
+</title>
+<link rel="shortcut icon" href="https://fenmyZhang.github.io/favicon.ico?v=1573182874597">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://fenmyZhang.github.io/styles/main.css">
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://fenmyZhang.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script>
-		<script type="text/javascript">
-			L2Dwidget.init();
-		</script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
+        
+</head>
 
-  </head>
-  <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://fenmyZhang.github.io">
-        <img class="avatar" src="https://fenmyZhang.github.io/images/avatar.png?v=1573182820537" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://fenmyZhang.github.io">
-        <h1 class="site-title">fenmy</h1>
-      </a>
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://fenmyZhang.github.io">
+                <img class="avatar" src="https://fenmyZhang.github.io/images/avatar.png?v=1573182874597" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    fenmy
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
     </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
-  </div>
 </div>
 
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
-      
-        
-          <a href="/" class="menu purple-link">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="menu purple-link">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="menu purple-link">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="menu purple-link">
-            关于
-          </a>
-        
-      
-    </div>
-  </div>
-</transition>
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
 
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
 
-      <div class="content-container">
-        <div class="post-detail">
-          
-            <div class="feature-container" style="background-image: url('https://www.z4a.net/images/2019/09/07/404.jpg')">
-            </div>
-          
-          <h2 class="post-title">表单post和get在使用过程的问题记录</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2019-11-04</span>
-            
-              <span>
-                <i class="icon-pricetags-outline"></i>
-                
-                  <a href="https://fenmyZhang.github.io/tag/nJuURnLa3">
-                    post
-                    
-                      ，
-                    
-                  </a>
-                
-                  <a href="https://fenmyZhang.github.io/tag/psJ8apPfuX">
-                    get
-                    
-                      ，
-                    
-                  </a>
-                
-                  <a href="https://fenmyZhang.github.io/tag/43JKrg-BFc">
-                    表单
-                    
-                  </a>
-                
-              </span>
-            
-          </div>
-          <div class="post-content">
-            <p>（在form表单中的<strong>method</strong>使用post时候出现提交并非post提交而是get提交，在地址栏产生参数）<br>
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            表单post和get在使用过程的问题记录
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-11-04</time>
+                            
+                                <a href="https://fenmyZhang.github.io/tag/nJuURnLa3" class="post-tag i-tag
+                            i-tag-error">
+                            #post
+                        </a>
+                                
+                                <a href="https://fenmyZhang.github.io/tag/psJ8apPfuX" class="post-tag i-tag
+                            i-tag-other_2">
+                            #get
+                        </a>
+                                
+                                <a href="https://fenmyZhang.github.io/tag/43JKrg-BFc" class="post-tag i-tag
+                            i-tag-warning">
+                            #表单
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('https://www.z4a.net/images/2019/09/07/404.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <p>（在form表单中的<strong>method</strong>使用post时候出现提交并非post提交而是get提交，在地址栏产生参数）<br>
 ...</p>
 <!-- more -->
 <p>👩‍⚕：问题可能出在句子的语法上面，很大程度是语法错误了，仔细找找是否存在语法错误的地方。<br>
 👳：因为post提交数据需要被post包裹，语法错误使得数据无法被post使用，智能使用默认的get方法提交了。</p>
 
-          </div>
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                                <!-- id-card -->
+                                
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://fenmyZhang.github.io/images/avatar.png?v=1573182874597)">
         </div>
+        <h1 class="id_card-title">
+            fenmy
+        </h1>
+        <h2 class="id_card-description">
+            小小技术存档   &gt;}-_-`}&gt;
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
 
-        
-      </div>
+        </div>
+    </div>
+    
+                                    
 
-      
+                </div>
 
-      <div class="site-footer">
-  <div class="slogan">小小技术存档   >}-_-`}></div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-  <script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1278187388&web_id=1278187388"></script><br/>@ <a href="https://fenmyzhang.github.io/" target="_blank">fenmy</a> use gridea & github  | <a class="rss" href="https://fenmyZhang.github.io/atom.xml" target="_blank">RSS</a>
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  <script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1278187388&web_id=1278187388"></script><br/>@ <a href="https://fenmyzhang.github.io/" target="_blank">fenmy</a> use gridea & github  | 
+  <a class="rss" href="https://fenmyZhang.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
-
-    </div>
-    <script type="application/javascript">
-
-hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
-
+<script>
+  hljs.initHighlightingOnLoad()
 </script>
 
 
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
 
-
-  </body>
 </html>

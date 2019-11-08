@@ -1460,6 +1460,10 @@ a.purple-link {
   border-radius: 16px;
 }
 
+      body {
+        font-size: 14px;
+      }
+    
       .post-item{border-bottom: 1px solid #ffdede;}
 @media (max-width: 600px)
 #live2d-widget{

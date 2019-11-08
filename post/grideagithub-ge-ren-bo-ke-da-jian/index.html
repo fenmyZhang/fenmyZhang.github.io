@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>Gridea+Github个人博客搭建 | fenmy</title>
+<meta name="description" content="小小技术存档   &gt;}-_-`}&gt;">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://fenmyZhang.github.io/favicon.ico?v=1573232880747">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://fenmyZhang.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script>
+		<script type="text/javascript">
+			L2Dwidget.init();
+		</script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://fenmyZhang.github.io">
+        <img class="avatar" src="https://fenmyZhang.github.io/images/avatar.png?v=1573232880747" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://fenmyZhang.github.io">
+        <h1 class="site-title">fenmy</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('http://save.kemiyo.top/blog/20191108/h0cggRP3wUx4.png')">
+            </div>
+          
+          <h2 class="post-title">Gridea+Github个人博客搭建</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2019-11-08</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://fenmyZhang.github.io/tag/l-4tR-Hsg">
+                    gridea
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://fenmyZhang.github.io/tag/Rnf2o95sC1">
+                    搭建博客
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://fenmyZhang.github.io/tag/nTgKv_hZMI">
+                    博客
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://fenmyZhang.github.io/tag/YSHySO9qCM">
+                    github
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://fenmyZhang.github.io/tag/pK2ZZRfVHf">
+                    记载
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <p>😀😀之前用过hexo+github搭建博客，效果很好，可是就是写文章和发文章有点麻烦，要很多东西一起协调，hexo-admin可以解决这些问题，但是我又不是很喜欢，后面就接触到了gridea的这个搭建博客的工具。<br>
+😜😜话不多说记录一下。</p>
+<!-- more -->
+<h3 id="gridea-下载地址httpsgrideadev"><strong>Gridea 下载地址</strong>：<a href="https://gridea.dev/">https://gridea.dev/</a></h3>
+<ul>
+<li><em>网站提供多个系统支持的版本（Mac OS、Windows、Linux），下载我们需要的版本即可</em></li>
+</ul>
+<figure data-type="image" tabindex="1"><img src="http://save.kemiyo.top/blog/20191108/h0cggRP3wUx4.png?imageslim" alt="mark"></figure>
+<ul>
+<li>gridea具有的优点，感受一下</li>
+</ul>
+<figure data-type="image" tabindex="2"><img src="http://save.kemiyo.top/blog/20191108/bccEVz1LxShI.png?imageslim" alt="mark"></figure>
+<h3 id="gridea-安装及配置"><strong>Gridea 安装及配置</strong></h3>
+<ul>
+<li>下载直接安装打开即可</li>
+</ul>
+<figure data-type="image" tabindex="3"><img src="http://save.kemiyo.top/blog/20191108/Cgia06XB5uKm.png?imageslim" alt="来源：https://gridea.dev/"></figure>
+<ul>
+<li>
+<p><strong>配置过程1.Github</strong></p>
+</li>
+<li>
+<p>注册一个github的账号（具体操作掠过，并不难）</p>
+</li>
+<li>
+<p>登录账号，新建一个仓库，仓库名必须是你的用户名加 yourusername.github.io，否则后续可能出错<br>
+<img src="http://save.kemiyo.top/blog/20191109/YECnh17xMPct.png?imageslim" alt="mark"></p>
+</li>
+<li>
+<p>创建token<br>
+（点击路径：头像--settings--Developer settings--Personal access tokens）<br>
+点击&quot;Generate new token&quot;按钮创建token，note随便写，repo勾上<br>
+<img src="http://save.kemiyo.top/blog/20191109/EPG6Mt1DWPmo.png?imageslim" alt="mark"><br>
+😝分割线-------------------<br>
+<img src="http://save.kemiyo.top/blog/20191109/tER0ClliyqKB.png?imageslim" alt="mark"><br>
+😝完成后，生成的token记得复制哟！（github处结束）</p>
+</li>
+<li>
+<p><strong>配置过程2.gridea</strong></p>
+</li>
+<li>
+<p>打开gridea-配置，输入内容（域名为仓库名，分支master不变，仓库用户名不一定等于你的用户名，邮箱无所谓，token填上面复制的那个）<br>
+<img src="http://save.kemiyo.top/blog/20191109/2cD4lIE7GR93.png?imageslim" alt="mark"></p>
+</li>
+<li>
+<p>点击-测试远程连接，没有其他问题就可以连接成功</p>
+</li>
+<li>
+<p>点击-预览可离线查看生成的页面哟🤗</p>
+</li>
+<li>
+<p>点击-同步就可以上传到github在线查看了，输入yourusername.github.io即可查看，有绑定自己域名的就输入自己的域名，这里就不写怎么绑定了，毕竟先看见效果很重要哟</p>
+</li>
+<li>
+<p>其他的你还可以配置：评论、头像、图标、主题等等<br>
+<img src="http://save.kemiyo.top/blog/20191109/foFmb7g4UMi2.png" alt="foFmb7g4UMi2.png"></p>
+</li>
+<li>
+<p>👍使用内置markdown编辑器,开始创建你的第一篇文章吧!!!hello world!!!<br>
+<br/><br>
+*另说：gridea是可以自定义主题的，可以自己创作的，具体参考 (https://gridea.dev/docs/)，也可以下载别人的主题(https://gridea.dev/themes/)，或者使用内置主题。gridea的可自定义程度很高，喜欢的朋友可以自己另加探索。本文属于记载会有不足，因为本博客不提供评论，所以遇到不懂请自行百度,加油哟!</p>
+</li>
+</ul>
+<br/>
+  <center>@内容原创,转载希望告知.</center>
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://fenmyZhang.github.io/post/tu-pian-geng-xin">
+              <h3 class="post-title">
+                下一篇：图片更新
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">小小技术存档   >}-_-`}></div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  <script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1278187388&web_id=1278187388"></script><br/>@ <a href="https://fenmyzhang.github.io/" target="_blank">fenmy</a> use gridea & github  | <a class="rss" href="https://fenmyZhang.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

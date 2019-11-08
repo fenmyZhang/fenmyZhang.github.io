@@ -1077,7 +1077,7 @@ summary {
 .site-footer .social-container a {
   margin: 0 8px;
 }
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   #live2dcanvas {
     display: none;
   }
